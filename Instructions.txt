@@ -1,0 +1,68 @@
+To-Do App
+A full-stack To-Do Application built using React (frontend), Flask (backend), and MySQL (database).
+This project is containerized using Docker Compose for easy deployment and testing.
+
+Features
+1. Add, view, and mark tasks as completed.
+2. Backend REST API built with Flask and SQLAlchemy.
+3. Frontend built using React.
+4. MySQL database for persistent storage.
+5. Docker Compose support for running the full stack locally.
+
+
+Tech Stack
+Frontend - React.js
+Backend	- Flask (Python)
+Database - MySQL
+Containerization - Docker & Docker Compose
+
+
+Project Structure
+To-do-App/ 
+├── backend/ 
+│ ├── app/  
+├── tests/
+├── Dockerfile 
+│ └── requirements.txt 
+├── frontend/  
+├── src/  
+├── public/ 
+├── Dockerfile 
+│ └── package.json 
+├── docker-compose.yml 
+├── README.md
+└── Instructions
+
+
+Prerequisites
+Docker Desktop
+Git
+VS Code (recommended)
+
+
+🛠️ Setup & Run (Without Docker Hub)
+
+1️. Clone the Repository
+git clone https://github.com/Buddhiimz/To-do-App.git
+cd Assesment
+
+2️. Run Docker Compose
+docker-compose up --build
+
+3️. Access the App
+Frontend → http://localhost:3000
+Backend API → http://localhost:5000
+
+4. Running Tests
+
+4.1 Backend tests (run below codes)
+cd backend
+$env:PYTHONPATH = "${PWD}"
+pytest -v
+
+4.2 Frontend tests (run below codes)
+cd frontend
+npm test
+
+Stop Containers
+docker-compose down
