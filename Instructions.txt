@@ -44,7 +44,7 @@ VS Code (recommended)
 
 1️. Clone the Repository
 git clone https://github.com/Buddhiimz/To-do-App.git
-cd Assesment
+cd cd To-do-App
 
 2️. Run Docker Compose
 docker-compose up --build
