@@ -7,7 +7,15 @@ function App() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [tasks, setTasks] = useState([]);
-  const API = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
+  const hostname = window.location.hostname;
+
+  const API =
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname.includes(".")
+      ? `http://${hostname}:5000` // host/PC access
+      : "http://backend:5000"; // internal Docker container
 
   // Fetch latest tasks from backend
   const fetchTasks = async () => {
