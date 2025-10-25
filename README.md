@@ -1,4 +1,4 @@
-## 🛠️ Setup & Run (Without Docker Hub)
+## 🛠️ Setup & Run
 
 ### 1️. Clone the Repository
 
@@ -8,7 +8,7 @@ cd To-do-App
 
 ### 2️. Run Docker Compose
 
-docker-compose up --build
+docker compose up -d
 
 ### 3️. Access the App
 
@@ -22,6 +22,8 @@ Backend API → http://localhost:5000
 
 cd backend
 
+& .\venv\Scripts\Activate.ps1
+
 $env:PYTHONPATH = "${PWD}"
 
 pytest -v
@@ -29,6 +31,8 @@ pytest -v
 ##### 4.2 Frontend tests (run below codes)
 
 cd frontend
+
+npm install
 
 npm test
 
