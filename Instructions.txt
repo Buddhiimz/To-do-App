@@ -47,7 +47,7 @@ git clone https://github.com/Buddhiimz/To-do-App.git
 cd cd To-do-App
 
 2️. Run Docker Compose
-docker-compose up --build
+docker compose up -d
 
 3️. Access the App
 Frontend → http://localhost:3000
@@ -62,6 +62,7 @@ pytest -v
 
 4.2 Frontend tests (run below codes)
 cd frontend
+npm install
 npm test
 
 Stop Containers

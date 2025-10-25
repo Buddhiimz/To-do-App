@@ -34,8 +34,6 @@ services:
       DATABASE_NAME: todo_db
     ports:
       - "5000:5000"
-    volumes:
-      - ./backend:/app
 
   frontend:
     build: ./frontend
@@ -45,11 +43,10 @@ services:
     tty: true
     depends_on:
       - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend:/app
-    command: ["npm", "start"]
 
 volumes:
   db_data:

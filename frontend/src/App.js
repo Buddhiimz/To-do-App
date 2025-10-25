@@ -7,7 +7,7 @@ function App() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [tasks, setTasks] = useState([]);
-  const API = process.env.REACT_APP_API_URL || "http://localhost:5000"; // API base URL
+  const API = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
   // Fetch latest tasks from backend
   const fetchTasks = async () => {
